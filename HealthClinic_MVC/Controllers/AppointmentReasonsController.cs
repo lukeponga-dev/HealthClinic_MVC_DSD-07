@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HealthClinic_MVC.Data;
 using HealthClinic_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HealthClinic_MVC.Controllers
 {
@@ -42,7 +43,7 @@ namespace HealthClinic_MVC.Controllers
 
             return View(appointmentReason);
         }
-
+        [Authorize]
         // GET: AppointmentReasons/Create
         public IActionResult Create()
         {
@@ -64,7 +65,7 @@ namespace HealthClinic_MVC.Controllers
             }
             return View(appointmentReason);
         }
-
+        [Authorize]
         // GET: AppointmentReasons/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -115,7 +116,7 @@ namespace HealthClinic_MVC.Controllers
             }
             return View(appointmentReason);
         }
-
+        [Authorize]
         // GET: AppointmentReasons/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

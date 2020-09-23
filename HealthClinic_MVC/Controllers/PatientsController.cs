@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HealthClinic_MVC.Data;
 using HealthClinic_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HealthClinic_MVC.Controllers
 {
+    [Authorize]
     public class PatientsController : Controller
     {
         private readonly HealthClinic_DBContext _context;
