@@ -18,7 +18,7 @@ namespace HealthClinic_MVC.Models
         public string Option { get; set; }
 
         //Holds the Price of the appointment
-        [Column(TypeName = "decimal(18, 2)")]
+        [DataType(DataType.Currency), Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
     }

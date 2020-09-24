@@ -13,6 +13,7 @@ namespace HealthClinic_MVC.Models
         public int Id { get; set; }
 
         //holds the doctors name
+        [Required]
         public string Name { get; set; }
 
         //bool to show if doctor is full time or false

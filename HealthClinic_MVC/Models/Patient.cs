@@ -13,9 +13,11 @@ namespace HealthClinic_MVC.Models
         public int Id { get; set; }
 
         //holds patients name
+        [Required]
         public string Name { get; set; }
 
         //holds patients mobile number
+        [Required]
         [Display(Name = "Mobile Number")]
         public string MobileNumber { get; set; }
     }

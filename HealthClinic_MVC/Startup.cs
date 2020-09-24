@@ -39,6 +39,7 @@ namespace Hair_Dressing_Appointments_MVC
             services.AddDbContext<HealthClinic_DBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("HealthClinic_DBContext")));
 
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
