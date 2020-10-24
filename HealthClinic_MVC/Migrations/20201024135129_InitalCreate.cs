@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HealthClinic_MVC.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitalCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,8 @@ namespace HealthClinic_MVC.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Reason = table.Column<string>(nullable: true),
-                    Charge = table.Column<decimal>(nullable: false)
+                    Option = table.Column<string>(nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18, 2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,7 +27,7 @@ namespace HealthClinic_MVC.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     IsFullTime = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
@@ -41,8 +41,8 @@ namespace HealthClinic_MVC.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
-                    MobileNumber = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false),
+                    MobileNumber = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,7 +58,7 @@ namespace HealthClinic_MVC.Migrations
                     PatientId = table.Column<int>(nullable: false),
                     DoctorId = table.Column<int>(nullable: false),
                     ReasonForAppointmentId = table.Column<int>(nullable: false),
-                    AppointmentTime = table.Column<DateTime>(nullable: false)
+                    AppDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
