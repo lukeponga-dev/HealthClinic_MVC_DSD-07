@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HealthClinic_MVC.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class Identity_HealthClinicdbContext : Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public Identity_HealthClinicdbContext(DbContextOptions<Identity_HealthClinicdbContext> options)
             : base(options)
         {
         }

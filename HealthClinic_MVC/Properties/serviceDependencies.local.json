@@ -6,11 +6,7 @@
     },
     "mssql2": {
       "type": "mssql.local",
-      "connectionId": "HealthClinic_MVCContext"
-    },
-    "mssql3": {
-      "type": "mssql.local",
-      "connectionId": "HealthClinic_DBContext"
+      "connectionId": "Identity_HealthClinicdbContext"
     }
   }
 }

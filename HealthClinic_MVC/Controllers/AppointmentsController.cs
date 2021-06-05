@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using HealthClinic_MVC.Data;
 using HealthClinic_MVC.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HealthClinic_MVC.Controllers
 {
@@ -63,7 +64,7 @@ namespace HealthClinic_MVC.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PatientId,DoctorId,ReasonForAppointmentId,AppDate")] Appointment appointment)
+        public async Task<IActionResult> Create([Bind("Id,PatientId,DoctorId,ReasonForAppointmentId,AppDate, IsCompleted")] Appointment appointment)
         {
             if (ModelState.IsValid)
             {

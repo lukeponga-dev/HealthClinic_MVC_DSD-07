@@ -20,6 +20,11 @@ namespace HealthClinic_MVC.Models
 
         //Links to Appointment reason Table
         public int ReasonForAppointmentId { get; set; }
+
+        [Display(Name = "Done")]
+
+        //Bool to see if Appointment Completed or fasle
+        public bool IsCompleted { get; set; }
       
         //Holds the Date of Appointment
         [Display(Name = "Appointment Date")]

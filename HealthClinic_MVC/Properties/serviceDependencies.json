@@ -10,7 +10,15 @@
     },
     "mssql3": {
       "type": "mssql",
-      "connectionId": "HealthClinic_DBContext"
+      "connectionId": "ConnectionStrings:HealthClinic_DBContext"
+    },
+    "mssql4": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:Identity_HealthClinicdbContext"
+    },
+    "mssql5": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:DefaultConnection"
     }
   }
 }
